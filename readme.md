@@ -33,9 +33,9 @@ rename to customer_order
 ```
 
 ```sql
-alter table customer_order
-alter column user_id
-rename to customer_id
+ALTER TABLE customer_order
+RENAME COLUMN user_id
+to customer_id;
 ```
 
 ```sql

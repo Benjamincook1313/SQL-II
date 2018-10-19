@@ -4,7 +4,7 @@ CREATE TABLE product
 (
 	id SERIAL PRIMARY KEY,
 	product_name text,
-	price money
+	price double
 );
 
 insert into product
