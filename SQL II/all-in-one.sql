@@ -329,7 +329,7 @@ CREATE TABLE product
 (
 	id SERIAL PRIMARY KEY,
 	product_name text,
-	price double
+	price float
 );
 
 insert into product
