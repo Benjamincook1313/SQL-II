@@ -19,34 +19,23 @@
 ```sql
   alter table product
   alter column price
-  set DATA TYPE money
+  set DATA TYPE NUMERIC (15, 2)
 ```
 
 ```sql
-Alter table account
-rename to customer
+alter table line_item
+rename to order_item
 ```
 
 ```sql
-alter table account_order
-rename to customer_order
-```
-
-```sql
-ALTER TABLE customer_order
-RENAME COLUMN user_id
-to customer_id;
+ALTER TABLE customer
+RENAME COLUMN name
+to first_name;
 ```
 
 ```sql
 alter table account_order
-rename column state
-to shipping_state
-```
-
-```sql
-alter table account_order
-add column shipping_status text
+add column shipping_status tex
 ```
 
 ## Data Relations
