@@ -20,13 +20,13 @@ create table payment
   address VARCHAR(255) NOT NULL,
   state VARCHAR(2) NOT NULL,
   expiration DATE NOT NULL,
-  account_id INT NOT NULL
+  customer_id INT NOT NULL
 );
 
 create table address
 (
   id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL,
+  customer_id INT NOT NULL,
   address VARCHAR(50) NOT NULL,
   state VARCHAR(50) NOT NULL
 );
@@ -36,7 +36,7 @@ create table customer_order
   id SERIAL PRIMARY KEY,
   address_id INT NOT NULL,
   payment_id INT NOT NULL,
-  account_id INT NOT NULL,
+  customer_id INT NOT NULL,
   date DATE
 );
 
@@ -159,929 +159,929 @@ values
 -- address inserts
 
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (20, '91849 Farwell Drive', 'GA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (3, '79 Porter Parkway', 'FL');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (15, '34 Blaine Drive', 'NV');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (20, '59374 Bayside Terrace', 'TX');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (10, '0625 Nobel Court', 'GA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (14, '4717 Moose Avenue', 'FL');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (11, '802 Center Terrace', 'CT');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (10, '0 Almo Terrace', 'CA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (15, '1417 Cherokee Center', 'PA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (21, '9135 Prairie Rose Road', 'KY');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (5, '794 Kensington Way', 'AR');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (7, '39 Elgar Avenue', 'MN');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (19, '7 Hoffman Terrace', 'TX');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (18, '191 Arizona Hill', 'FL');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (16, '19 Oneill Way', 'MI');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (13, '278 Laurel Pass', 'LA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (23, '4 Burning Wood Pass', 'IN');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (16, '5 Evergreen Park', 'OK');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (14, '9337 Bashford Avenue', 'NV');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (25, '12318 Oak Valley Junction', 'TX');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (7, '2505 Knutson Terrace', 'PA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (4, '75 Lyons Court', 'CA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (2, '12 Eagan Junction', 'TX');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (14, '00544 Stone Corner Crossing', 'TN');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (15, '52911 Eastlawn Parkway', 'NC');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (6, '7 Green Ridge Avenue', 'TN');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (10, '38924 Victoria Crossing', 'DC');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (2, '73 Cordelia Court', 'MO');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (4, '34988 Macpherson Court', 'TX');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (19, '44311 Birchwood Road', 'FL');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (23, '84436 Commercial Court', 'DC');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (3, '8 Golf Trail', 'HI');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (15, '6 Northport Pass', 'TX');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (5, '8012 Victoria Park', 'CA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (12, '71 Hovde Crossing', 'OH');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (15, '2 Arapahoe Way', 'NV');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (19, '524 Columbus Place', 'FL');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (5, '2204 Coleman Point', 'OH');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (3, '4 Namekagon Lane', 'CO');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (18, '8569 Hagan Street', 'MO');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (15, '82809 Bellgrove Hill', 'AL');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (2, '1 Buell Place', 'WA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (1, '4790 Delaware Hill', 'TX');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (11, '5146 Troy Alley', 'GA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (23, '1 Farragut Place', 'FL');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (4, '0 Mcbride Road', 'GA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (9, '11105 Butternut Junction', 'GA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (18, '0 Maple Wood Plaza', 'FL');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (6, '422 Logan Trail', 'FL');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (6, '5 Jana Pass', 'KS');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (13, '63 Lyons Crossing', 'TX');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (20, '15 Steensland Center', 'MN');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (13, '3 Mayer Drive', 'MO');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (25, '0 Nancy Parkway', 'NC');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (9, '93987 Stephen Trail', 'AL');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (20, '760 Kennedy Alley', 'CA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (5, '0 Schiller Park', 'PA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (9, '01 Roxbury Terrace', 'IL');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (8, '5633 Caliangt Point', 'LA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (15, '238 Ohio Road', 'TX');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (23, '326 Starling Alley', 'MA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (12, '6 Novick Court', 'TX');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (9, '42 Huxley Plaza', 'CA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (21, '011 Center Way', 'PA');
 insert into address
-  (user_id, address, state)
+  (customer_id, address, state)
 values
   (10, '1 Mayer Terrace', 'GA');
 
 -- payment inserts
 
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3536208092822291', '0904 Claremont Center', 'NC', '7/9/2020', 13);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3562103911182091', '456 Crest Line Alley', 'IN', '5/23/2020', 23);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3535773405850322', '6103 Schlimgen Parkway', 'MD', '10/3/2020', 3);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('5602241075590118', '6 Di Loreto Point', 'TX', '12/6/2020', 20);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('5429969552556035', '885 Goodland Way', 'OK', '3/29/2020', 19);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3539215798514004', '0 Packers Trail', 'CA', '3/13/2020', 22);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('4905685842494261', '366 Division Lane', 'MA', '7/15/2020', 15);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3547120888066727', '8885 Loftsgordon Center', 'NY', '4/13/2020', 6);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3564047261259058', '08 Dorton Park', 'MA', '8/2/2020', 2);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3571101347797952', '19 Gina Street', 'WA', '1/15/2020', 16);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('5146425813111138', '2747 Lakewood Gardens Park', 'VA', '3/20/2020', 22);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3576802511041326', '3384 Bay Junction', 'PA', '3/7/2021', 18);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('5020186050518341', '12 Emmet Circle', 'VA', '7/23/2020', 6);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('4917742566888468', '552 Lakewood Hill', 'FL', '3/10/2020', 15);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('5315164872081123', '89 Shasta Parkway', 'VA', '8/30/2020', 3);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('4913340455264208', '0 Bartelt Street', 'CO', '8/26/2020', 3);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('5287056490552648', '45 Cordelia Hill', 'MS', '4/17/2020', 9);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3536523589970894', '84 Debra Park', 'PA', '3/29/2020', 14);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3568926455995807', '3385 Blue Bill Park Plaza', 'DC', '3/3/2020', 3);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3573792902767550', '78 Upham Crossing', 'FL', '1/31/2021', 1);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3586754762789145', '99 Shoshone Avenue', 'WI', '2/18/2021', 1);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3574110821388797', '08324 Manley Trail', 'DC', '3/26/2020', 3);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3536926310250462', '1888 Iowa Place', 'CA', '12/5/2020', 18);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('5610865406022853', '45 Carpenter Trail', 'NC', '8/4/2020', 8);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3629938253022499', '79 Thompson Trail', 'FL', '11/15/2020', 7);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('5602249025421743', '4 Surrey Circle', 'NV', '10/13/2020', 19);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('2019268126363172', '2 Becker Park', 'FL', '4/14/2020', 8);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('4844101969362894', '84262 Fulton Hill', 'CA', '6/23/2020', 8);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3379417562024942', '7 Helena Point', 'MO', '9/17/2020', 21);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('0604363108927840', '4554 Redwing Alley', 'KS', '4/28/2020', 8);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3567304216385570', '37186 Mallard Lane', 'LA', '11/11/2020', 5);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3533392438779390', '61 Independence Parkway', 'CO', '5/6/2020', 11);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3562471907932948', '6 Mayer Park', 'KS', '1/23/2020', 13);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('6761514440107030', '5 Scott Avenue', 'GA', '3/4/2020', 10);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3566974399222047', '9 Daystar Court', 'OH', '9/4/2020', 3);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('4903728642212621', '12729 Fallview Way', 'KY', '2/22/2020', 4);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('5610396174006201', '5 Laurel Crossing', 'MA', '1/10/2021', 12);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('5610113593042537', '46 Summit Way', 'MN', '2/2/2020', 2);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3723015864297997', '42 Grover Trail', 'MN', '11/22/2020', 12);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('5007666493042107', '348 Glendale Court', 'OH', '11/24/2020', 24);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('5002350421522277', '311 Nevada Terrace', 'FL', '3/28/2020', 6);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3723015663700627', '099 Kedzie Place', 'CA', '1/13/2020', 4);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3742837235994030', '8214 Meadow Ridge Circle', 'CA', '1/28/2021', 16);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3742888568937210', '47 Grim Avenue', 'NY', '5/22/2020', 24);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('4917986622093610', '42328 Gateway Avenue', 'IA', '7/10/2020', 13);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('5610070328412050', '3 Texas Junction', 'MO', '9/7/2020', 1);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3577430866960480', '636 Lerdahl Trail', 'MA', '2/4/2020', 11);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3582271108695560', '48590 Grayhawk Plaza', 'TN', '3/1/2020', 17);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3574424091218720', '0931 Oriole Parkway', 'AL', '5/17/2020', 17);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('4905335521156679', '02 Huxley Lane', 'WV', '10/9/2020', 23);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('4017959671978252', '45713 Morrow Park', 'SC', '10/15/2020', 11);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3573704487452938', '1046 Merchant Terrace', 'IA', '3/10/2020', 18);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3529383827632445', '3 Roxbury Avenue', 'DE', '8/17/2020', 14);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3576530663761637', '3363 Commercial Street', 'NY', '1/14/2020', 25);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3570034822379114', '22 Eastlawn Hill', 'FL', '6/8/2020', 17);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('4905164292527944', '675 Dayton Point', 'WA', '12/14/2020', 18);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('4913338179676145', '6 Oriole Crossing', 'TX', '7/11/2020', 25);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3577963594613206', '24519 Hauk Court', 'TX', '2/4/2020', 21);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3532591452216871', '8112 Green Junction', 'MS', '9/3/2020', 1);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('6706285935010547', '8860 Fairfield Street', 'NE', '6/19/2020', 19);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3578416694407606', '18 Saint Paul Parkway', 'FL', '7/17/2020', 4);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('3548259706588535', '23 Center Hill', 'OK', '1/23/2021', 17);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('5010124001207559', '5 Lakeland Drive', 'CA', '8/11/2020', 4);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('4917088658149744', '509 Forster Junction', 'OR', '1/29/2020', 2);
 insert into payment
-  (card_number, address, state, expiration, account_id)
+  (card_number, address, state, expiration, customer_id)
 values
   ('5100179603523069', '2 Garrison Court', 'FL', '11/23/2020', 5);
 
 -- customer_order inserts
 
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (12, 8, 12, '7/17/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (35, 5, 18, '9/28/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (9, 29, 15, '1/10/2019');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (20, 39, 23, '8/27/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (23, 11, 10, '7/8/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (6, 4, 9, '12/15/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (14, 53, 24, '7/7/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (5, 54, 17, '10/27/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (46, 65, 5, '1/8/2019');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (14, 27, 24, '5/26/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (36, 17, 19, '12/28/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (53, 63, 14, '4/16/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (11, 54, 22, '2/5/2019');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (55, 59, 7, '4/18/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (60, 37, 3, '12/24/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (7, 52, 23, '2/16/2019');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (45, 53, 22, '5/1/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (4, 55, 4, '3/20/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (9, 57, 14, '9/24/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (10, 20, 25, '4/8/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (52, 14, 3, '4/17/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (22, 55, 19, '4/2/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (48, 13, 25, '10/23/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (2, 41, 6, '7/16/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (25, 61, 14, '10/22/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (54, 24, 12, '5/12/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (12, 19, 18, '8/5/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (38, 29, 1, '1/13/2019');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (25, 46, 2, '10/29/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (41, 12, 12, '12/23/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (39, 23, 15, '10/4/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (53, 4, 8, '12/15/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (9, 61, 10, '12/11/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (49, 30, 22, '5/11/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (32, 52, 16, '12/2/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (2, 9, 13, '5/2/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (39, 61, 11, '2/17/2019');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (2, 19, 19, '10/8/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (36, 59, 23, '8/16/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (25, 14, 2, '1/14/2019');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (34, 30, 16, '2/5/2019');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (10, 39, 19, '5/31/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (7, 30, 13, '1/28/2019');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (18, 2, 21, '1/12/2019');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (6, 22, 17, '7/24/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (64, 49, 15, '7/3/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (11, 18, 4, '11/30/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (2, 58, 7, '7/16/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (36, 65, 13, '8/27/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (59, 65, 18, '9/9/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (15, 38, 19, '5/18/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (53, 64, 24, '1/6/2019');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (28, 41, 9, '7/12/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (25, 4, 7, '10/11/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (51, 32, 20, '3/14/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (4, 30, 10, '7/10/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (46, 22, 6, '9/4/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (45, 1, 25, '2/22/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (51, 43, 21, '5/11/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (40, 60, 3, '4/25/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (28, 40, 25, '10/21/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (35, 4, 25, '10/2/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (8, 20, 18, '3/23/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (33, 9, 8, '5/23/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (12, 64, 18, '10/28/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (48, 42, 20, '5/28/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (28, 48, 8, '5/11/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (64, 61, 11, '12/5/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (65, 5, 22, '1/10/2019');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (35, 30, 6, '6/30/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (9, 28, 12, '1/21/2019');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (33, 30, 21, '11/24/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (55, 26, 12, '5/28/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (28, 35, 8, '7/25/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (62, 19, 21, '10/6/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (60, 48, 14, '3/25/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (56, 28, 5, '5/28/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (60, 32, 25, '5/18/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (16, 10, 18, '2/10/2019');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (53, 14, 16, '8/21/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (54, 45, 7, '6/6/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (14, 49, 7, '3/29/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (55, 61, 4, '12/7/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (13, 17, 12, '9/27/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (33, 34, 20, '12/24/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (43, 42, 13, '12/14/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (15, 37, 21, '4/20/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (32, 16, 9, '1/22/2019');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (32, 32, 17, '12/5/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (34, 43, 24, '3/17/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (22, 48, 8, '12/26/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (65, 58, 23, '9/27/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (9, 12, 13, '12/16/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (46, 40, 8, '3/9/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (2, 55, 18, '4/2/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (28, 6, 12, '10/11/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (18, 17, 8, '7/26/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (15, 64, 4, '10/13/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (43, 37, 23, '11/19/2018');
 insert into customer_order
-  (address_id, payment_id, account_id, date)
+  (address_id, payment_id, customer_id, date)
 values
   (47, 9, 13, '5/4/2018');
 

@@ -11,7 +11,6 @@
 - Insert
 - delete
 
-
 - Aliasing with an AS statements.
 
 ## Alter Table
@@ -38,23 +37,6 @@ alter table customer_order
 add column shipping_status text
 ```
 
-## Data Relations
-
-### 1 to 1
-
-- Passport
-
-
-
-### 1 to Many
-
-- Authors to books
-- Orders per customer
-
-### Many to Many
-
-- Albums to Songs
-
 ## SubQueries
 
 - When getting all the items the customer ordered it is a major pain
@@ -73,9 +55,9 @@ where id in (
 ```
 
 ```sql
-select avg(price)
+select *
 from product
-where avg > (
+where price > (
   select avg(price)
   from product
 )
@@ -91,16 +73,35 @@ where avg > (
 
 Super ultra death join
 
+simple join to get product info
 ```SQL
-select sum(p.price * qty) as total, shipping_address, order_id, name, account.id
-from line_item
-join product p on line_item.product_id = p.id
-join account_order on line_item.order_id = account_order.id
-join account on account.id = account_order.user_id
-group by order_id, shipping_address, name, account.id
-order by total desc
-limit 5
+select * from line_item
+join product on product.id = line_item.product_id 
+where order_id = 5
+order by qty desc
 ```
+
+```SQL
+select address, state, email, name, customer_order.id, array_to_json(array_agg(line_item)) as items
+from line_item
+join customer_order on customer_order.id = line_item.order_id
+join address on address.id = customer_order.address_id
+join customer on customer.id = customer_order.customer_id
+where order_id = 5
+group by customer_order.id, address, state, name, email;
+```
+
+aliased
+```SQL
+select address, state, email, name, co.id, array_to_json(array_agg(line_item)) as items
+from line_item
+join customer_order as co on co.id = line_item.order_id
+join address as a on a.id = co.address_id
+join customer as c on c.id = co.account_id
+where order_id = 5
+group by co.id, address, state, name, email;
+```
+
 
 ## Foreign Keys
 
