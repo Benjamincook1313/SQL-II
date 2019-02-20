@@ -117,8 +117,7 @@ CREATE TABLE customer_order
   id SERIAL PRIMARY KEY,
   shipping_address text,
   customer_id integer REFERENCES customer(id),
-  shipping_state varChar(2),
-  shipping_status text
+  shipping_state varChar(2)
 );
 
 
