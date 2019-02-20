@@ -1,5 +1,9 @@
-DROP TABLE IF EXISTS account;
+DROP TABLE IF EXISTS line_item;
+DROP TABLE IF EXISTS order_item;
+DROP TABLE IF EXISTS product;
+DROP TABLE IF EXISTS customer_order;
 DROP TABLE IF EXISTS customer;
+
 
 CREATE TABLE customer
 (
@@ -109,14 +113,11 @@ insert into customer
 values
   ('Caitlin', 'cmiello@ning.com');
 
-DROP TABLE IF EXISTS account_order;
-DROP TABLE IF EXISTS customer_order;
-
 CREATE TABLE customer_order
 (
   id SERIAL PRIMARY KEY,
   shipping_address text,
-  customer_id integer REFERENCES customer(id),
+  customer_id integer,
   shipping_state varChar(2)
 );
 
@@ -321,8 +322,6 @@ insert into customer_order
   (shipping_address, customer_id, shipping_state)
 values
   ('9 Katie Alley', 4, 'CA');
-
-DROP TABLE IF EXISTS product;
 
 CREATE TABLE product
 (
@@ -732,13 +731,11 @@ insert into product
 values
   ('Sauerkraut', 21.73);
 
-DROP TABLE IF EXISTS line_item;
-
 CREATE TABLE line_item
 (
   id SERIAL PRIMARY KEY,
-  order_id integer REFERENCES customer_order(id),
-  product_id integer REFERENCES product(id),
+  order_id integer,
+  product_id integer,
   qty integer
 );
 
