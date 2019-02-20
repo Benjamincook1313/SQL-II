@@ -20,13 +20,13 @@ create table payment
   address VARCHAR(255) NOT NULL,
   state VARCHAR(2) NOT NULL,
   expiration DATE NOT NULL,
-  account_id INT NOT NULL
+  account_id integer references customer(id) NOT NULL
 );
 
 create table address
 (
   id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL,
+  user_id integer references customer(id) NOT NULL,
   address VARCHAR(50) NOT NULL,
   state VARCHAR(50) NOT NULL
 );
@@ -34,9 +34,9 @@ create table address
 create table customer_order
 (
   id SERIAL PRIMARY KEY,
-  address_id INT NOT NULL,
-  payment_id INT NOT NULL,
-  account_id INT NOT NULL,
+  address_id integer references address(id) NOT NULL,
+  payment_id integer references payment(id) NOT NULL,
+  account_id integer references customer(id) NOT NULL,
   date DATE
 );
 
@@ -50,8 +50,8 @@ CREATE TABLE product
 CREATE TABLE line_item
 (
   id SERIAL PRIMARY KEY,
-  order_id integer NOT NULL,
-  product_id integer NOT NULL,
+  order_id integer references customer_order(id) NOT NULL,
+  product_id integer references product(id) NOT NULL,
   qty integer NOT NULL
 );
 

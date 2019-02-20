@@ -1,71 +1,270 @@
-create table address (
- id serial Primary Key,
+drop table if exists address;
+
+create table address
+(
+	id SERIAL PRIMARY KEY,
 	user_id INT,
 	address VARCHAR(50),
 	state VARCHAR(50)
 );
-insert into MOCK_DATA (user_id, address, state) values (11, '16 Debs Alley', 'DC');
-insert into MOCK_DATA (user_id, address, state) values (77, '5115 Lerdahl Court', 'TN');
-insert into MOCK_DATA (user_id, address, state) values (90, '5 Graedel Place', 'TX');
-insert into MOCK_DATA (user_id, address, state) values (66, '232 Monterey Alley', 'TX');
-insert into MOCK_DATA (user_id, address, state) values (92, '8 Acker Place', 'IA');
-insert into MOCK_DATA (user_id, address, state) values (5, '3 Springs Court', 'NC');
-insert into MOCK_DATA (user_id, address, state) values (39, '25 Independence Pass', 'WA');
-insert into MOCK_DATA (user_id, address, state) values (88, '2 Browning Drive', 'NY');
-insert into MOCK_DATA (user_id, address, state) values (76, '70437 Londonderry Junction', 'CA');
-insert into MOCK_DATA (user_id, address, state) values (49, '1 Carpenter Avenue', 'IL');
-insert into MOCK_DATA (user_id, address, state) values (32, '166 Graceland Hill', 'PA');
-insert into MOCK_DATA (user_id, address, state) values (14, '29 Jenifer Place', 'TX');
-insert into MOCK_DATA (user_id, address, state) values (92, '940 Dexter Crossing', 'AR');
-insert into MOCK_DATA (user_id, address, state) values (78, '9573 Sutteridge Circle', 'FL');
-insert into MOCK_DATA (user_id, address, state) values (93, '553 Chive Street', 'IL');
-insert into MOCK_DATA (user_id, address, state) values (20, '63935 Calypso Way', 'MD');
-insert into MOCK_DATA (user_id, address, state) values (46, '156 Del Sol Terrace', 'OH');
-insert into MOCK_DATA (user_id, address, state) values (39, '3 Lakewood Gardens Trail', 'TX');
-insert into MOCK_DATA (user_id, address, state) values (16, '61182 Bellgrove Road', 'TX');
-insert into MOCK_DATA (user_id, address, state) values (97, '5 Northfield Circle', 'LA');
-insert into MOCK_DATA (user_id, address, state) values (77, '579 Scott Parkway', 'CA');
-insert into MOCK_DATA (user_id, address, state) values (99, '289 Larry Park', 'MO');
-insert into MOCK_DATA (user_id, address, state) values (60, '0099 Anhalt Avenue', 'CO');
-insert into MOCK_DATA (user_id, address, state) values (78, '38 Delaware Avenue', 'NY');
-insert into MOCK_DATA (user_id, address, state) values (42, '6 Oneill Alley', 'TX');
-insert into MOCK_DATA (user_id, address, state) values (42, '8410 Alpine Park', 'MN');
-insert into MOCK_DATA (user_id, address, state) values (58, '0652 Reindahl Park', 'NC');
-insert into MOCK_DATA (user_id, address, state) values (22, '0 Parkside Lane', 'IL');
-insert into MOCK_DATA (user_id, address, state) values (46, '56 Mesta Terrace', 'FL');
-insert into MOCK_DATA (user_id, address, state) values (72, '2100 Debra Avenue', 'WI');
-insert into MOCK_DATA (user_id, address, state) values (39, '0 Annamark Crossing', 'CA');
-insert into MOCK_DATA (user_id, address, state) values (20, '598 Nobel Place', 'CA');
-insert into MOCK_DATA (user_id, address, state) values (99, '3 Waubesa Court', 'OH');
-insert into MOCK_DATA (user_id, address, state) values (40, '8838 Schlimgen Crossing', 'MA');
-insert into MOCK_DATA (user_id, address, state) values (36, '30 Johnson Circle', 'VA');
-insert into MOCK_DATA (user_id, address, state) values (36, '9100 East Hill', 'OH');
-insert into MOCK_DATA (user_id, address, state) values (6, '5 Anthes Street', 'TX');
-insert into MOCK_DATA (user_id, address, state) values (1, '22544 Hansons Lane', 'CA');
-insert into MOCK_DATA (user_id, address, state) values (16, '5 Dawn Lane', 'MO');
-insert into MOCK_DATA (user_id, address, state) values (34, '525 Jackson Hill', 'OH');
-insert into MOCK_DATA (user_id, address, state) values (65, '3 Oak Place', 'OH');
-insert into MOCK_DATA (user_id, address, state) values (95, '32583 Acker Way', 'FL');
-insert into MOCK_DATA (user_id, address, state) values (41, '440 Trailsway Court', 'TX');
-insert into MOCK_DATA (user_id, address, state) values (73, '36967 Farragut Alley', 'TX');
-insert into MOCK_DATA (user_id, address, state) values (48, '67891 4th Road', 'OH');
-insert into MOCK_DATA (user_id, address, state) values (65, '3 Thompson Point', 'TX');
-insert into MOCK_DATA (user_id, address, state) values (80, '86 Crownhardt Center', 'CA');
-insert into MOCK_DATA (user_id, address, state) values (80, '72 Schiller Drive', 'GA');
-insert into MOCK_DATA (user_id, address, state) values (3, '6811 Westridge Avenue', 'GA');
-insert into MOCK_DATA (user_id, address, state) values (80, '928 Mariners Cove Plaza', 'CA');
-insert into MOCK_DATA (user_id, address, state) values (53, '0 Golf Hill', 'AK');
-insert into MOCK_DATA (user_id, address, state) values (44, '41876 Farragut Street', 'PA');
-insert into MOCK_DATA (user_id, address, state) values (12, '81865 Packers Street', 'AR');
-insert into MOCK_DATA (user_id, address, state) values (62, '96237 South Place', 'MN');
-insert into MOCK_DATA (user_id, address, state) values (53, '219 Huxley Lane', 'CT');
-insert into MOCK_DATA (user_id, address, state) values (70, '526 Namekagon Junction', 'HI');
-insert into MOCK_DATA (user_id, address, state) values (21, '1572 Harbort Court', 'CA');
-insert into MOCK_DATA (user_id, address, state) values (15, '44737 Tony Terrace', 'NY');
-insert into MOCK_DATA (user_id, address, state) values (51, '4798 Butterfield Drive', 'CA');
-insert into MOCK_DATA (user_id, address, state) values (73, '75 Jenna Crossing', 'TN');
-insert into MOCK_DATA (user_id, address, state) values (27, '406 Melvin Way', 'NY');
-insert into MOCK_DATA (user_id, address, state) values (9, '647 Thackeray Center', 'TX');
-insert into MOCK_DATA (user_id, address, state) values (56, '83 Lunder Avenue', 'OK');
-insert into MOCK_DATA (user_id, address, state) values (6, '442 Shelley Drive', 'GA');
-insert into MOCK_DATA (user_id, address, state) values (66, '35 Hovde Center', 'NJ');
+
+insert into address
+	(user_id, address, state)
+values
+	(20, '91849 Farwell Drive', 'GA');
+insert into address
+	(user_id, address, state)
+values
+	(3, '79 Porter Parkway', 'FL');
+insert into address
+	(user_id, address, state)
+values
+	(15, '34 Blaine Drive', 'NV');
+insert into address
+	(user_id, address, state)
+values
+	(20, '59374 Bayside Terrace', 'TX');
+insert into address
+	(user_id, address, state)
+values
+	(10, '0625 Nobel Court', 'GA');
+insert into address
+	(user_id, address, state)
+values
+	(14, '4717 Moose Avenue', 'FL');
+insert into address
+	(user_id, address, state)
+values
+	(11, '802 Center Terrace', 'CT');
+insert into address
+	(user_id, address, state)
+values
+	(10, '0 Almo Terrace', 'CA');
+insert into address
+	(user_id, address, state)
+values
+	(15, '1417 Cherokee Center', 'PA');
+insert into address
+	(user_id, address, state)
+values
+	(21, '9135 Prairie Rose Road', 'KY');
+insert into address
+	(user_id, address, state)
+values
+	(5, '794 Kensington Way', 'AR');
+insert into address
+	(user_id, address, state)
+values
+	(7, '39 Elgar Avenue', 'MN');
+insert into address
+	(user_id, address, state)
+values
+	(19, '7 Hoffman Terrace', 'TX');
+insert into address
+	(user_id, address, state)
+values
+	(18, '191 Arizona Hill', 'FL');
+insert into address
+	(user_id, address, state)
+values
+	(16, '19 Oneill Way', 'MI');
+insert into address
+	(user_id, address, state)
+values
+	(13, '278 Laurel Pass', 'LA');
+insert into address
+	(user_id, address, state)
+values
+	(23, '4 Burning Wood Pass', 'IN');
+insert into address
+	(user_id, address, state)
+values
+	(16, '5 Evergreen Park', 'OK');
+insert into address
+	(user_id, address, state)
+values
+	(14, '9337 Bashford Avenue', 'NV');
+insert into address
+	(user_id, address, state)
+values
+	(25, '12318 Oak Valley Junction', 'TX');
+insert into address
+	(user_id, address, state)
+values
+	(7, '2505 Knutson Terrace', 'PA');
+insert into address
+	(user_id, address, state)
+values
+	(4, '75 Lyons Court', 'CA');
+insert into address
+	(user_id, address, state)
+values
+	(2, '12 Eagan Junction', 'TX');
+insert into address
+	(user_id, address, state)
+values
+	(14, '00544 Stone Corner Crossing', 'TN');
+insert into address
+	(user_id, address, state)
+values
+	(15, '52911 Eastlawn Parkway', 'NC');
+insert into address
+	(user_id, address, state)
+values
+	(6, '7 Green Ridge Avenue', 'TN');
+insert into address
+	(user_id, address, state)
+values
+	(10, '38924 Victoria Crossing', 'DC');
+insert into address
+	(user_id, address, state)
+values
+	(2, '73 Cordelia Court', 'MO');
+insert into address
+	(user_id, address, state)
+values
+	(4, '34988 Macpherson Court', 'TX');
+insert into address
+	(user_id, address, state)
+values
+	(19, '44311 Birchwood Road', 'FL');
+insert into address
+	(user_id, address, state)
+values
+	(23, '84436 Commercial Court', 'DC');
+insert into address
+	(user_id, address, state)
+values
+	(3, '8 Golf Trail', 'HI');
+insert into address
+	(user_id, address, state)
+values
+	(15, '6 Northport Pass', 'TX');
+insert into address
+	(user_id, address, state)
+values
+	(5, '8012 Victoria Park', 'CA');
+insert into address
+	(user_id, address, state)
+values
+	(12, '71 Hovde Crossing', 'OH');
+insert into address
+	(user_id, address, state)
+values
+	(15, '2 Arapahoe Way', 'NV');
+insert into address
+	(user_id, address, state)
+values
+	(19, '524 Columbus Place', 'FL');
+insert into address
+	(user_id, address, state)
+values
+	(5, '2204 Coleman Point', 'OH');
+insert into address
+	(user_id, address, state)
+values
+	(3, '4 Namekagon Lane', 'CO');
+insert into address
+	(user_id, address, state)
+values
+	(18, '8569 Hagan Street', 'MO');
+insert into address
+	(user_id, address, state)
+values
+	(15, '82809 Bellgrove Hill', 'AL');
+insert into address
+	(user_id, address, state)
+values
+	(2, '1 Buell Place', 'WA');
+insert into address
+	(user_id, address, state)
+values
+	(1, '4790 Delaware Hill', 'TX');
+insert into address
+	(user_id, address, state)
+values
+	(11, '5146 Troy Alley', 'GA');
+insert into address
+	(user_id, address, state)
+values
+	(23, '1 Farragut Place', 'FL');
+insert into address
+	(user_id, address, state)
+values
+	(4, '0 Mcbride Road', 'GA');
+insert into address
+	(user_id, address, state)
+values
+	(9, '11105 Butternut Junction', 'GA');
+insert into address
+	(user_id, address, state)
+values
+	(18, '0 Maple Wood Plaza', 'FL');
+insert into address
+	(user_id, address, state)
+values
+	(6, '422 Logan Trail', 'FL');
+insert into address
+	(user_id, address, state)
+values
+	(6, '5 Jana Pass', 'KS');
+insert into address
+	(user_id, address, state)
+values
+	(13, '63 Lyons Crossing', 'TX');
+insert into address
+	(user_id, address, state)
+values
+	(20, '15 Steensland Center', 'MN');
+insert into address
+	(user_id, address, state)
+values
+	(13, '3 Mayer Drive', 'MO');
+insert into address
+	(user_id, address, state)
+values
+	(25, '0 Nancy Parkway', 'NC');
+insert into address
+	(user_id, address, state)
+values
+	(9, '93987 Stephen Trail', 'AL');
+insert into address
+	(user_id, address, state)
+values
+	(20, '760 Kennedy Alley', 'CA');
+insert into address
+	(user_id, address, state)
+values
+	(5, '0 Schiller Park', 'PA');
+insert into address
+	(user_id, address, state)
+values
+	(9, '01 Roxbury Terrace', 'IL');
+insert into address
+	(user_id, address, state)
+values
+	(8, '5633 Caliangt Point', 'LA');
+insert into address
+	(user_id, address, state)
+values
+	(15, '238 Ohio Road', 'TX');
+insert into address
+	(user_id, address, state)
+values
+	(23, '326 Starling Alley', 'MA');
+insert into address
+	(user_id, address, state)
+values
+	(12, '6 Novick Court', 'TX');
+insert into address
+	(user_id, address, state)
+values
+	(9, '42 Huxley Plaza', 'CA');
+insert into address
+	(user_id, address, state)
+values
+	(21, '011 Center Way', 'PA');
+insert into address
+	(user_id, address, state)
+values
+	(10, '1 Mayer Terrace', 'GA');

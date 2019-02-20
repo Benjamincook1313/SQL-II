@@ -34,8 +34,8 @@ to first_name;
 ```
 
 ```sql
-alter table account_order
-add column shipping_status tex
+alter table customer_order
+add column shipping_status text
 ```
 
 ## Data Relations

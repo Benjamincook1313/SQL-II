@@ -1,213 +1,410 @@
-DROP TABLE IF EXISTS account_order;
-DROP TABLE IF EXISTS customer_order;
+drop table if exists customer_order;
 
-CREATE TABLE customer_order
+create table customer_order
 (
 	id SERIAL PRIMARY KEY,
-	shipping_address text,
-	customer_id integer REFERENCES customer(id),
-	shipping_state varChar(2),
-	shipping_status text
+	address_id INT,
+	payment_id INT,
+	account_id INT,
+	date DATE
 );
-
-
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('34 Old Shore Crossing', 17, 'HI');
+	(12, 8, 12, '7/17/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('48 Center Terrace', 6, 'WI');
+	(35, 5, 18, '9/28/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('918 Shoshone Terrace', 2, 'VA');
+	(9, 29, 15, '1/10/2019');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('303 Moland Circle', 19, 'NC');
+	(20, 39, 23, '8/27/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('8 Fuller Drive', 4, 'IN');
+	(23, 11, 10, '7/8/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('3 Kennedy Point', 4, 'TX');
+	(6, 4, 9, '12/15/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('76 Prentice Park', 20, 'LA');
+	(14, 53, 24, '7/7/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('0753 Killdeer Parkway', 17, 'AZ');
+	(5, 54, 17, '10/27/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('340 Monument Place', 18, 'OH');
+	(46, 65, 5, '1/8/2019');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('31 Vidon Street', 3, 'TX');
+	(14, 27, 24, '5/26/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('70 Sage Circle', 14, 'MN');
+	(36, 17, 19, '12/28/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('2 Logan Way', 19, 'CA');
+	(53, 63, 14, '4/16/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('8289 Lighthouse Bay Center', 19, 'VA');
+	(11, 54, 22, '2/5/2019');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('801 Sachs Center', 11, 'NC');
+	(55, 59, 7, '4/18/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('30 Truax Hill', 10, 'TX');
+	(60, 37, 3, '12/24/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('76 Larry Avenue', 2, 'DE');
+	(7, 52, 23, '2/16/2019');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('1721 Dunning Point', 13, 'AL');
+	(45, 53, 22, '5/1/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('8349 Anzinger Alley', 6, 'IA');
+	(4, 55, 4, '3/20/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('7 Rutledge Trail', 16, 'CA');
+	(9, 57, 14, '9/24/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('1664 Service Lane', 3, 'TX');
+	(10, 20, 25, '4/8/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('2238 Cambridge Place', 4, 'FL');
+	(52, 14, 3, '4/17/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('978 Jenna Park', 1, 'UT');
+	(22, 55, 19, '4/2/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('6437 Garrison Park', 16, 'FL');
+	(48, 13, 25, '10/23/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('780 Lunder Pass', 17, 'CA');
+	(2, 41, 6, '7/16/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('8658 Stang Center', 17, 'AL');
+	(25, 61, 14, '10/22/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('29 Loeprich Road', 13, 'KS');
+	(54, 24, 12, '5/12/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('3747 Memorial Trail', 11, 'TX');
+	(12, 19, 18, '8/5/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('09 Acker Junction', 8, 'MA');
+	(38, 29, 1, '1/13/2019');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('92 Oxford Terrace', 9, 'DC');
+	(25, 46, 2, '10/29/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('524 Cherokee Drive', 11, 'NY');
+	(41, 12, 12, '12/23/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('461 Sunnyside Park', 12, 'AZ');
+	(39, 23, 15, '10/4/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('767 Lighthouse Bay Street', 12, 'TN');
+	(53, 4, 8, '12/15/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('910 Mayfield Avenue', 15, 'MO');
+	(9, 61, 10, '12/11/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('12 Lakewood Road', 13, 'CA');
+	(49, 30, 22, '5/11/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('676 Hermina Way', 2, 'IL');
+	(32, 52, 16, '12/2/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('8793 Sloan Plaza', 16, 'GA');
+	(2, 9, 13, '5/2/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('09 Fairfield Plaza', 14, 'MI');
+	(39, 61, 11, '2/17/2019');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('21 Pleasure Alley', 16, 'MA');
+	(2, 19, 19, '10/8/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('37425 Di Loreto Park', 17, 'NY');
+	(36, 59, 23, '8/16/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('3 Commercial Drive', 16, 'CA');
+	(25, 14, 2, '1/14/2019');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('99 Brentwood Alley', 12, 'CO');
+	(34, 30, 16, '2/5/2019');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('021 Carpenter Drive', 9, 'DC');
+	(10, 39, 19, '5/31/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('8 Carioca Crossing', 18, 'FL');
+	(7, 30, 13, '1/28/2019');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('123 Columbus Parkway', 14, 'IL');
+	(18, 2, 21, '1/12/2019');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('8 David Street', 4, 'NY');
+	(6, 22, 17, '7/24/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('433 Browning Street', 6, 'MO');
+	(64, 49, 15, '7/3/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('05 Prentice Place', 3, 'NY');
+	(11, 18, 4, '11/30/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('4 Dorton Trail', 20, 'LA');
+	(2, 58, 7, '7/16/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('0854 Westerfield Park', 5, 'TX');
+	(36, 65, 13, '8/27/2018');
 insert into customer_order
-	(shipping_address, customer_id, shipping_state)
+	(address_id, payment_id, account_id, date)
 values
-	('9 Katie Alley', 4, 'CA');
+	(59, 65, 18, '9/9/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(15, 38, 19, '5/18/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(53, 64, 24, '1/6/2019');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(28, 41, 9, '7/12/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(25, 4, 7, '10/11/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(51, 32, 20, '3/14/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(4, 30, 10, '7/10/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(46, 22, 6, '9/4/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(45, 1, 25, '2/22/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(51, 43, 21, '5/11/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(40, 60, 3, '4/25/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(28, 40, 25, '10/21/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(35, 4, 25, '10/2/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(8, 20, 18, '3/23/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(33, 9, 8, '5/23/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(12, 64, 18, '10/28/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(48, 42, 20, '5/28/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(28, 48, 8, '5/11/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(64, 61, 11, '12/5/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(65, 5, 22, '1/10/2019');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(35, 30, 6, '6/30/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(9, 28, 12, '1/21/2019');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(33, 30, 21, '11/24/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(55, 26, 12, '5/28/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(28, 35, 8, '7/25/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(62, 19, 21, '10/6/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(60, 48, 14, '3/25/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(56, 28, 5, '5/28/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(60, 32, 25, '5/18/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(16, 10, 18, '2/10/2019');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(53, 14, 16, '8/21/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(54, 45, 7, '6/6/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(14, 49, 7, '3/29/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(55, 61, 4, '12/7/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(13, 17, 12, '9/27/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(33, 34, 20, '12/24/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(43, 42, 13, '12/14/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(15, 37, 21, '4/20/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(32, 16, 9, '1/22/2019');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(32, 32, 17, '12/5/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(34, 43, 24, '3/17/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(22, 48, 8, '12/26/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(65, 58, 23, '9/27/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(9, 12, 13, '12/16/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(46, 40, 8, '3/9/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(2, 55, 18, '4/2/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(28, 6, 12, '10/11/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(18, 17, 8, '7/26/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(15, 64, 4, '10/13/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(43, 37, 23, '11/19/2018');
+insert into customer_order
+	(address_id, payment_id, account_id, date)
+values
+	(47, 9, 13, '5/4/2018');
